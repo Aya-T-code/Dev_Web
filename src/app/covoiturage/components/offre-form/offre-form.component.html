@@ -1,0 +1,32 @@
+<form [formGroup]="offreForm">
+    <table class="styled-table"> 
+      <thead>
+        <th></th>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+      <label for="proposePar-input">Proposé par:</label></td>
+      <input type="text" id="proposePar-input" formControlName="proposePar">
+    </tr>
+    <tr><td>
+      <label for="v_Depart-input">Ville Depart:</label></td>
+      <td>
+      <input type="text" id="v_Depart-input" formControlName="v_Depart"></td>
+    </tr>
+    <td>
+      <label for="v_Arrivee-input">Ville Arrivée:</label>
+      <td>
+      <input type="text" id="v_Arrivee-input" formControlName="v_Arrivee"></td>
+      <tr>
+        <td>
+      <label for="date-input">Date:</label></td>
+      <td>
+      <input type="date" id="date-input" formControlName="date"></td>
+    </tr>
+    
+   <tr > <td></td> <td class="text-center align-middle">
+    <button (click)="doSubmitOffre()"class="button-two">{{buttonText}}</button></td> </tr>
+  </tbody>
+</table>
+  </form>

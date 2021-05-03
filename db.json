@@ -1,0 +1,26 @@
+{
+    "offres": [
+      {
+        "proposePar": {"id": 1,
+                       "nom":"Mohamed" ,
+                       "prenom":"Mohamed" , 
+                       "genre":"employeA",
+                       "adressMail":"@"},
+         "v_Depart": "Alger",
+          "v_Arrivee": "Boumerdes", 
+          "date": "2021-12-22",
+         "id": 1
+      },
+      {
+        "id": 2,
+        "proposePar": {"id": 1,
+            "nom":"Amina" ,
+            "prenom":"Amina" , 
+            "genre":"employeB",
+            "adressMail":"@"},
+        "v_Depart": "Oran",
+        "v_Arrivee": "Chlef", 
+        "date": "2021-10-01"
+      }
+    ]
+  }

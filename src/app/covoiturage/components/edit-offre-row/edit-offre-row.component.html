@@ -1,0 +1,12 @@
+<ng-container [formGroup]="editOffreForm">
+    <td>{{offre.id}}</td>
+    <td><input type="text" formControlName="proposePar"></td>
+    <td><input type="text" formControlName="v_Depart"></td>
+    <td><input type="text" formControlName="v_Arrivee"></td>
+    <td><input type="date" formControlName="date"></td>
+    
+    <td>
+      <button (click)="doSave()" class="button-two">Save</button>
+      <button (click)="doCancel()" class="button-two">Cancel</button>
+    </td>
+  </ng-container>

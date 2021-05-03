@@ -1,0 +1,26 @@
+<table class="styled-table">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Proposé Par</th>
+        <th>Ville Depart</th>
+        <th>Ville Arrivé</th>
+        <th>Date</th>
+        <th></th>
+        
+        
+      </tr>
+    </thead>
+    <tbody>
+      <ng-container *ngFor="let offre of offres">
+        <tr class="app-view-offre-row"
+          *ngIf="editOffreId !== offre.id"
+          [offre]="offre" (editOffre)="doEdit($event)"
+          (deleteOffre)="doDelete($event)" ></tr>
+        <tr class="app-edit-offre-row"
+          *ngIf="editOffreId === offre.id"
+          [offre]="offre" (saveOffre)="doSave($event)"
+          (cancelOffre)="doCancel()" ></tr>
+      </ng-container>
+    </tbody>
+  </table>

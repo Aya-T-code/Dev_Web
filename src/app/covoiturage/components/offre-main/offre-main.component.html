@@ -1,0 +1,61 @@
+<tool-header headerText="Covoiturage"></tool-header>
+
+
+<div>
+  <h1 >Liste des offres</h1>
+</div>
+<div>
+<app-offre-table [offres]="offres$ | async " [editOffreId]="editOffreId$ | async "
+  (editOffre)="doEditOffre($event)"
+  (deleteOffre)="doDeleteOffre($event)"
+  (saveOffre)="doReplaceOffre($event)"
+  (cancelOffre)="doCancelOffre()"></app-offre-table></div>
+
+  <table class="styled-table"> 
+    <thead><th>choisissez ce que vous voulez faire</th> <th></th></thead>
+    <tbody>
+      <tr><td>
+        <label>Ajouter une nouvelle offre</label></td>
+        <td> <input type="checkbox" [checked]="false" (change)="fieldsChange($event)"  /></td>
+      </tr> 
+        
+        <tr>
+          <td> <label>Rechercher les offres par date</label></td>
+        <td> <input type="checkbox" [checked]="false" (change)="fieldsChange2($event)"  /></td></tr> 
+      </tbody>
+    </table>
+
+
+  <div [hidden]=hidden>
+    <h1>Ajouter une nouvelle offre</h1>
+<offre-form buttonText="Add offre" (submitOffre)="doAddOffre($event)"></offre-form></div>
+
+<div [hidden]=hidden2>
+  <h1>Rechercher les offres par date</h1>
+  <form (ngSubmit)="onSubmit()">
+    <table class="styled-table"> <thead><td></td></thead>
+      <tbody>
+        <tr> <td>
+  <label>Donner la date</label></td>
+  <td><input type="date" [(ngModel)]="date" [ngModelOptions]="{standalone: true}" ></td>
+
+<td>
+  <button type="submit" class="button-two">Filtrer</button ></td></tr>
+  </tbody>
+</table>
+</form>
+  <app-offre-table [offres]="offresss$ | async " [editOffreId]="editOffreId$ | async "
+  (editOffre)="doEditOffre($event)"
+  (deleteOffre)="doDeleteOffre($event)"
+  (saveOffre)="doReplaceOffre($event)"
+  (cancelOffre)="doCancelOffre()"></app-offre-table>
+</div>
+
+
+
+
+  
+
+
+
+
